@@ -14,6 +14,11 @@ class profile::basic inherits profile {
     provider => 'yum'
   }
 
+  package { "wget":
+    ensure => installed,
+    provider => 'yum'
+  }
+
   file { "/root/.aws":
     ensure => directory
   }->
