@@ -5,6 +5,11 @@ class profile::basic inherits profile {
     docroot => '/vagrant/Downloads/',
   }
 
+  package { "createrepo":
+    ensure => installed,
+    provider => 'yum'
+  }
+
   file { "/root/.aws":
     ensure => directory
   }->
