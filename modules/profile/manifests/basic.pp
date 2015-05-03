@@ -15,7 +15,4 @@ class profile::basic {
     provider => 'gem',
   }
 
-
-  Class ['apache'] -> Class ['apache::vhost']
-
 }
