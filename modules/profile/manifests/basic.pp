@@ -1,5 +1,6 @@
 class profile::basic inherits profile {
   include apache
+  inclide java
 
 #  file { "/vagrant/Downloads/www":
 #    ensure => directory
