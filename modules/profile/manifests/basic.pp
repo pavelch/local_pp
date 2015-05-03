@@ -1,4 +1,4 @@
-class profile::basic {
+class profile::basic inherits profile {
   include apache
   apache::vhost { 'first.example.com':
     port    => '80',
