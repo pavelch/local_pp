@@ -1,8 +1,12 @@
 class profile::basic inherits profile {
   include apache
+
+  file { "/vagrant/Downloads/www":
+    ensure => directory
+  }->
   apache::vhost { 'first.example.com':
     port    => '80',
-    docroot => '/vagrant/Downloads/',
+    docroot => '/vagrant/Downloads/www',
   }
 
   package { "createrepo":
