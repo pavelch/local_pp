@@ -4,11 +4,11 @@ class mongodb {
   
     $db_dirs = [ "/data/", "/data/configdb"]
 
-    file { "/etc/yum.repos.d/mongodb.repo":
+    file { "/etc/yum.repos.d/mongodb-org-3.0.repo":
         content => "
 [mongodb-org-3.0]
 name=MongoDB Repository
-baseurl=http://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.0/x86_64/
+baseurl=http://repo.mongodb.org/yum/redhat/\$releasever/mongodb-org/3.0/x86_64/
 gpgcheck=0
 enabled=1
 ",
