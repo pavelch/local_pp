@@ -4,6 +4,11 @@ class profile::basic inherits profile {
 
 
 
+  package { "apache-maven":
+    ensure => installed,
+    provider => 'yum'
+  }
+
   package { "createrepo":
     ensure => installed,
     provider => 'yum'
@@ -12,7 +17,8 @@ class profile::basic inherits profile {
   package { "wget":
     ensure => installed,
     provider => 'yum'
-  }->
+  }
+
   package { 'pry':
     ensure   => 'installed',
     provider => 'gem',
