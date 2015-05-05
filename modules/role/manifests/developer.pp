@@ -2,7 +2,7 @@ class role::developer {
   include apache
   include java
   include profile::basic
-  include profile::maven
+#  include profile::maven
   include profile::aws
 
   exec { "cp /vagrant/.aws/credentials /root/.aws/credentials": }->
