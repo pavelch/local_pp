@@ -1,4 +1,6 @@
 class profile::maven {
+  include profile
+
   exec { "wget http://apache.mivzakim.net/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz": }->
   exec { "mv apache-maven-3.3.3 /opt/": }->
   file { '/usr/bin/mvn':
