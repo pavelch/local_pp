@@ -6,6 +6,8 @@ class role::developer {
 #  include profile::maven
   include profile::aws
 
+  Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] }
+
   exec { "cp /vagrant/.aws/credentials /root/.aws/credentials": }->
   exec { "dos2unix /root/.aws/credentials": }
 
