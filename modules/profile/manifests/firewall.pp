@@ -1,8 +1,5 @@
 class profile::firewall {
-  firewall { "000 accept all icmp requests":
-    proto  => "icmp",
-    action => "accept",
-  } ->
+
   firewall { "000 accept all icmp requests":
     proto  => "icmp",
     action => "accept",
