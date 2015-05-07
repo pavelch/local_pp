@@ -1,5 +1,8 @@
 class profile::firewall {
 
+  resources { "firewall":
+    purge => true
+  } ->
   firewall { "000 accept all icmp requests":
     proto  => "icmp",
     action => "accept",
