@@ -1,5 +1,6 @@
 class role::developer {
   include profile
+  include profile::firewall
   include apache
   include java
   include profile::basic
