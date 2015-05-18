@@ -5,6 +5,7 @@ class role::developer {
   include java
   include profile::basic
 #  include profile::maven
+  include profile::rubydev
   include profile::aws
 
   Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] }
