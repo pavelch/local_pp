@@ -22,6 +22,7 @@ enabled=0
 gpgcheck=0
     "
   }->
-  exec { "createrepo /var/www/html/": }
+  # create repo with sha1 preventing checksum failure
+  exec { "createrepo -d -s sha1 /var/www/html/": }
 
 }
